@@ -1,0 +1,11 @@
+@import 'fonts.css';
+@import 'components.css';
+@import 'ui.css';
+
+body {
+    background: #000;
+    font-family: 'Comfortaa', cursive;
+    color: #EEE;
+    overflow: hidden;
+    margin: 0;
+}
