@@ -16,8 +16,8 @@ export default class Textures {
         texture.flipY = false
         texture.encoding = THREE.sRGBEncoding
         texture.generateMipmaps = false;
-        texture.minFilter = THREE.LinearFilter;
-        texture.magFilter = THREE.LinearFilter;
+        texture.minFilter = THREE.NearestFilter;
+        texture.magFilter = THREE.NearestFilter;
         const material = new THREE.MeshBasicMaterial({
             map: texture
         })
