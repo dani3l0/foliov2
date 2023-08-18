@@ -1,3 +1,3 @@
-import './experience/experience'
+import App from "./app";
 
-
+window.app = new App()
