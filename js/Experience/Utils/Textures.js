@@ -8,11 +8,16 @@ export default class Textures {
 		}
 		Textures.instance = this
         this.textureLoader = new THREE.TextureLoader()
+        this.anisotropy = 1
     }
 
     load(file) {
         const texture = this.textureLoader.load(file)
         texture.flipY = false
+        texture.encoding = THREE.sRGBEncoding
+        texture.generateMipmaps = false;
+        texture.minFilter = THREE.LinearFilter;
+        texture.magFilter = THREE.LinearFilter;
         const material = new THREE.MeshBasicMaterial({
             map: texture
         })

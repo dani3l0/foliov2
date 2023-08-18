@@ -1,10 +1,12 @@
 import * as THREE from "three"
 import Experience from "./Experience"
+import Textures from "./Utils/Textures"
 
 
 export default class Renderer {
 	constructor() {
 		this.experience = new Experience()
+		this.textures = new Textures()
 		this.sizes = this.experience.sizes
 		this.scene = this.experience.scene
 		this.canvas = this.experience.canvas
@@ -15,15 +17,15 @@ export default class Renderer {
 	setRenderer() {
 		this.renderer = new THREE.WebGLRenderer({
 			canvas: this.canvas,
-			antialias: true,
+			antialias: false // this generates kinda ugly white outlines
 		})
-		this.renderer.setClearColor(0x000000, 0);
 		this.resize()
+		this.textures.anisotropy = this.renderer.capabilities.getMaxAnisotropy()
 	}
 
 	resize() {
 		this.renderer.setSize(this.sizes.width, this.sizes.height)
-		this.renderer.setPixelRatio(this.sizes.pixelRatio)
+		this.renderer.setPixelRatio(this.sizes.pixelRatio * 2) // *2 for fake anti-aliasing
 	}
 
 	update() {
