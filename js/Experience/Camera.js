@@ -13,9 +13,9 @@ export default class Camera {
 	createCamera() {
 		this.camera = new THREE.PerspectiveCamera(40, this.sizes.aspect, 0.1, 100)
 		this.scene.add(this.camera)
-		this.camera.position.set(2, 0, 2)
-		this.camera.rotateY(1)
-		this.camera.rotateX(1)
+		this.camera.position.set(4, 2, 4)
+		this.camera.rotateY(2)
+		this.camera.rotateX(2)
 	}
 
 	resize() {
