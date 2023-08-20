@@ -7,5 +7,12 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #EEE;
     overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     margin: 0;
+}
+
+s {
+    overflow-y: hidden;
+    text-decoration: none;
 }

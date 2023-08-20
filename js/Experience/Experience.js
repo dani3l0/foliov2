@@ -50,7 +50,7 @@ export default class Experience {
 		this.loadingManager = new LoadingManager()
 
 		this.loadingManager.addOnLoadListener((() => {
-			
+			document.getElementById("init").classList.add("hidden")
 		}).bind(this))
 
 		this.loadingManager.addOnProgressListener((url, loaded, total) => {
