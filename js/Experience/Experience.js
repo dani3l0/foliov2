@@ -55,7 +55,7 @@ export default class Experience {
 
 		this.loadingManager.addOnProgressListener((url, loaded, total) => {
 			let pp = Math.round(100 * loaded / total)
-			console.log(pp)
+			//console.log(pp)
 		})
 
 		this.loadingManager.startListening()

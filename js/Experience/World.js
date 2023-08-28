@@ -51,7 +51,7 @@ export default class World {
 
 	handleDefault(obj) {
 		obj.traverse((child) => {
-			console.log(child)
+			//console.log(child)
 		})
 	}
 }

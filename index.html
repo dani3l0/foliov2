@@ -20,48 +20,235 @@
 	<!-- Navigation bar -->
 	<nav>
 		<img src="https://avatars.githubusercontent.com/u/111448519">
-		<a>
+		<a to="main">
 			<i>home</i>
 			<b>Home</b>
 		</a>
-		<a>
-			<i>perm_contact_calendar</i>
+		<a to="about">
+			<i>face</i>
 			<b>About me</b>
 		</a>
-		<a>
-			<i>bar_chart</i>
+		<a to="skills">
+			<i>psychology</i>
 			<b>Skills</b>
 		</a>
-		<a>
-			<i>data_object</i>
+		<a to="projects">
+			<i>code</i>
 			<b>Projects</b>
 		</a>
-		<a>
+		<a to="contact">
 			<i>contact_phone</i>
 			<b>Contact</b>
 		</a>
-		<a style="margin-top: auto">
+		<a style="margin-top: auto" to="settings">
 			<i>settings</i>
 			<b>Settings</b>
 		</a>
 	</nav>
 
+	<!-- Page manager -->
 	<div class="wrapper">
 
-		<!-- Home page -->
-		<section id="home">
-			<s>
+			<!-- Home page -->
+			<section id="main"><s>
+				<span>
+					<h1>Hi, I'm Daniel</h1>
+					<div class="switching-twoline">
+						<div class="switching">
+							<p>Creative</p>
+							<p>Awesome</p>
+							<p>Independent</p>
+							<p>Fearless</p>
+							<p>Pragmatic</p>
+							<p>Imaginative</p>
+							<p>Trustworthy</p>
+						</div>
+						<div class="switching">
+							<p>Developer</p>
+							<p>Sysadmin</p>
+							<p>Self-Hoster</p>
+							<p>Linux user</p>
+							<p>Inventor</p>
+							<p>Designer</p>
+							<p>Friend</p>
+						</div>
+					</div>
+				</span>
+			</s></section>
+
+
+			<!-- About me -->
+			<section id="about"><s>
 				<header>
-					<i>home</i>
-					<h1>Something</h1>
-					<p>Description goes here one two three</p>
+					<i>face</i>
+					<h1>About me</h1>
+					<p>A quick introduction who I am</p>
 				</header>
 				<span>
-					<h1>Why?</h1>
-					<p>Because yes. I'd like to code in <code>Go</code>, but fucking no time for it.</p>
+					<div class="id-card">
+						<img src="https://avatars.githubusercontent.com/u/111448519">
+						<b>
+							<p>Name</p>
+							<h2>Daniel</h2>
+						</b>
+						<b>
+							<p>Age</p>
+							<h2>20</h2>
+						</b>
+						<b>
+							<p>From</p>
+							<h2>Poland</h2>
+						</b>
+					</div>
+					<div class="character-card">
+						<b style="--color: #69F">
+							<i>mood</i>
+							<p>Friendly</p>
+						</b>
+						<b style="--color: #F46">
+							<i>handshake</i>
+							<p>Helpful</p>
+						</b>
+						<b style="--color: #F72">
+							<i>self_improvement</i>
+							<p>Patient</p>
+						</b>
+						<b style="--color: #B8F">
+							<i>groups</i>
+							<p>Cooperative</p>
+						</b>
+						<b style="--color: #0FF">
+							<i>diamond</i>
+							<p>Creative</p>
+						</b>
+						<b style="--color: #0F8">
+							<i>person_play</i>
+							<p>Responsible</p>
+						</b>
+						<b style="--color: #F69">
+							<i>volunteer_activism</i>
+							<p>Understanding</p>
+						</b>
+						<b style="--color: #FB0">
+							<i>loyalty</i>
+							<p>Loyal</p>
+						</b>
+					</div>
 				</span>
-			</s>
-		</section>
+			</s></section>
+
+
+			<!-- Skills -->
+			<section id="skills"><s>
+				<header>
+					<i>psychology</i>
+					<h1>Skills</h1>
+					<p>What exactly I am capable of</p>
+				</header>
+				<span>
+					<div class="skills-card">
+						<b style="--color: #F67">
+							<p>Programming</p>
+							<i>code</i>
+						</b>
+						<b style="--color: #68F">
+							<p>Hardware</p>
+							<i>memory</i>
+						</b>
+						<b style="--color: #0D7">
+							<p>Administration</p>
+							<i>engineering</i>
+						</b>
+						<b style="--color: #F90">
+							<p>3D Modelling</p>
+							<i>view_in_ar</i>
+						</b>
+						<b style="--color: #A6F">
+							<p>Cybersecurity</p>
+							<i>security</i>
+						</b>
+						<b style="--color: #888">
+							<p>Other</p>
+							<i>more</i>
+						</b>
+					</div>
+				</span>
+			</s></section>
+
+
+			<!-- Projects -->
+			<section id="projects"><s>
+				<header>
+					<i>code</i>
+					<h1>Projects</h1>
+					<p>My work, or at least part of it</p>
+				</header>
+				<span>
+					<div class="projects"></div>
+				</span>
+			</s></section>
+
+			<!-- Contact -->
+			<section id="contact"><s>
+				<header>
+					<i>contact_phone</i>
+					<h1>Contact</h1>
+					<p>It'll be a pleasure to talk with you</p>
+				</header>
+				<span>
+					<div class="email">
+						<i>email</i>
+						<b>
+							<p>E-Mail</p>
+							<u>daniel.jank@protonmail.com</u>
+						</b>
+					</div>
+					<div class="social">
+						<a style="--color: #69F">
+							<i>email</i>
+							<div>
+								<p>Telegram</p>
+								<u>@dani3l0</u>
+							</div>
+						</a>
+						<a style="--color: #A6F">
+							<i>email</i>
+							<div>
+								<p>Discord</p>
+								<u>@dani3l0</u>
+							</div>
+						</a>
+						<a style="--color: #0F8">
+							<i>email</i>
+							<div>
+								<p>Matrix</p>
+								<u>@dani3l0</u>
+							</div>
+						</a>
+						<a style="--color: #888">
+							<i>email</i>
+							<div>
+								<p>GitHub</p>
+								<u>@dani3l0</u>
+							</div>
+						</a>
+					</div>
+				</span>
+			</s></section>
+
+			<!-- Settings -->
+			<section id="settings"><s>
+				<header>
+					<i>settings</i>
+					<h1>Settings</h1>
+					<!-- <p>Tweak website's experience!</p> -->
+				</header>
+				<span>
+					<p style="text-align: center;margin: 64px 0 0;font-size: 24px;">Coming soon!</p>
+					<p style="text-align: center;margin: 8px 0 128px;opacity: .6;font-weight: bold;">I still need to finish ALL the details, fix hidden bugs and cleanup some code<br>
+					Being a perfectionist sucks, I hate this</p>
+				</span>
+			</s></section>
 
 	</div>
 

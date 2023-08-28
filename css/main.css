@@ -1,18 +1,13 @@
 @import 'fonts.css';
 @import 'components.css';
-@import 'ui.css';
 
 body {
-    background: #000;
-    font-family: 'Comfortaa', cursive;
-    color: #EEE;
-    overflow: hidden;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    margin: 0;
-}
-
-s {
-    overflow-y: hidden;
-    text-decoration: none;
+	background: #000;
+	font-family: 'Comfortaa', cursive;
+	color: #EEE;
+	overflow: hidden;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	margin: 0;
+	font-size: 16px;
 }

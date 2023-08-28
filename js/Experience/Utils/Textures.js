@@ -14,7 +14,7 @@ export default class Textures {
     load(file) {
         const texture = this.textureLoader.load(file)
         texture.flipY = false
-        texture.encoding = THREE.sRGBEncoding
+        texture.colorSpace = THREE.SRGBColorSpace
         texture.generateMipmaps = false;
         texture.minFilter = THREE.NearestFilter;
         texture.magFilter = THREE.NearestFilter;
