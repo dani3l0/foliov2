@@ -26,6 +26,7 @@ export default class Experience {
 
 		this.renderer = new Renderer()
 		this.controls = new Controls()
+		this.controls.enabled = false
 
 		this.start()
 	}
@@ -41,8 +42,6 @@ export default class Experience {
 			this.controls.update()
 		})
 
-		// this.loop.addUpdateListener((delta) => {})
-
 		this.loop.startRendering()
 	}
 
@@ -55,7 +54,7 @@ export default class Experience {
 
 		this.loadingManager.addOnProgressListener((url, loaded, total) => {
 			let pp = Math.round(100 * loaded / total)
-			//console.log(pp)
+			console.log(url)
 		})
 
 		this.loadingManager.startListening()

@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import Experience from "./Experience";
+import { gsap } from 'gsap';
 
 
 export default class Camera {
@@ -8,18 +9,24 @@ export default class Camera {
 		this.sizes = this.experience.sizes
 		this.scene = this.experience.scene
 		this.createCamera()
+		document.addEventListener('mousemove', (e) => {
+			this.onDocumentMouseMove(e, this)
+		})
 	}
 	
 	createCamera() {
-		this.camera = new THREE.PerspectiveCamera(40, this.sizes.aspect, 0.1, 100)
+		this.camera = new THREE.PerspectiveCamera(65, this.sizes.aspect, 0.1, 100)
+		this.camera.position.z = 0.001
 		this.scene.add(this.camera)
-		this.camera.position.set(4, 2, 4)
-		this.camera.rotateY(2)
-		this.camera.rotateX(2)
 	}
 
 	resize() {
 		this.camera.aspect = this.sizes.aspect;
 		this.camera.updateProjectionMatrix();
+	}
+
+	onDocumentMouseMove(event, thi) {
+		window.mouseX = event.clientX
+		window.mouseY = event.clientY
 	}
 }

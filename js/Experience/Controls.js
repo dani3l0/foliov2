@@ -8,10 +8,11 @@ export default class Controls {
 		this.camera = this.experience.camera.camera
 		this.canvas = this.experience.canvas
 		this.controls = new OrbitControls(this.camera, this.canvas)
-		this.controls.enableDamping = true
+		this.controls.enableDamping = false
+		this.enabled = true
 	}
 	
 	update() {
-		this.controls.update()
+		if (this.enabled) this.controls.update()
 	}
 }

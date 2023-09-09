@@ -2,9 +2,14 @@ import PageManager from "../PageManager/PageManager";
 import Home from "../Pages/Home";
 
 export default class UI {
+	static instance
 	constructor() {
-        this.pageManager = new PageManager()
+		if (UI.instance) return
+		UI.instance = this
+	}
 
+	init() {
+        this.pageManager = new PageManager()
 		this.pageHome = new Home("main")
 	}
 }

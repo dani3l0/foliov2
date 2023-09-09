@@ -6,6 +6,9 @@ export default class App {
         const canvas = document.getElementById("experience")
         this.experience = new Experience(canvas)
 
-        const ui = new UI()
+        this.ui = new UI()
+        this.experience.loadingManager.addOnLoadListener(() => {
+            setTimeout(this.ui.init, 2000)
+        })
     }
 }
