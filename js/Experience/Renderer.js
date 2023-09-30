@@ -17,7 +17,7 @@ export default class Renderer {
 	setRenderer() {
 		this.renderer = new THREE.WebGLRenderer({
 			canvas: this.canvas,
-			antialias: false // this generates kinda ugly white outlines
+			antialias: true
 		})
 		this.resize()
 		this.textures.anisotropy = this.renderer.capabilities.getMaxAnisotropy()

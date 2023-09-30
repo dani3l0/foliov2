@@ -1,6 +1,7 @@
 export default class NavbarManager {
 	constructor() {
 		const navbar = document.getElementsByTagName("nav")[0]
+		navbar.classList.remove("hidden")
 		this.items = navbar.getElementsByTagName("a")
 	}
 

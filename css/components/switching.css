@@ -1,0 +1,35 @@
+/* Fancy switching text */
+
+.switching {
+	font-weight: bold;
+	font-size: 96px;
+	overflow: hidden;
+	margin: 4px 0;
+}
+
+.switching * {
+	margin: 0;
+}
+
+.switching p {
+	overflow: hidden;
+	line-height: 1;
+	padding: 8px 0;
+	position: absolute;
+}
+
+.switching b {
+	white-space: pre;
+	display: inline-block;
+	transition: transform .8s, opacity .5s;
+}
+
+.switching b.top {
+	opacity: 0;
+	transform: translateY(-200%);
+}
+
+.switching b.bottom {
+	opacity: 0;
+	transform: translateY(200%);
+}

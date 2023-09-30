@@ -1,0 +1,52 @@
+/* About me */
+
+.id-card {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.id-card img {
+	width: 108px;
+	height: 108px;
+	border: 2px solid #3338;
+	margin: 14px;
+	border-radius: 20px;
+}
+
+.id-card b {
+	margin: 0 auto;
+}
+
+.id-card p {
+	opacity: .6;
+	margin-bottom: 4px;
+}
+
+.id-card h2 {
+	font-size: 32px;
+}
+
+.character-card {
+	--color: #0F8;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	flex: 1 1 0;
+}
+
+.character-card b {
+	flex: 1;
+	min-width: 240px;
+	padding: 16px 14px;
+	display: flex;
+	align-items: center;
+}
+
+.character-card i {
+	padding: 8px;
+	color: var(--color);
+	margin-right: 10px;
+	text-shadow: 2px 2px 36px var(--color);
+	border-radius: 24px;
+}

@@ -1,0 +1,99 @@
+/* Some globals */
+
+body {
+	background: #000;
+	font-family: 'Comfortaa', cursive;
+	color: #EEE;
+	overflow: hidden;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	margin: 0;
+	font-size: 16px;
+}
+
+img {
+	object-fit: cover;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #8883;
+	border: 2px solid #8882;
+	border-radius: 10px;
+}
+
+
+/* Three.js background */
+
+canvas {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	opacity: .5;
+	z-index: -1;
+	transition: opacity 1.5s;
+}
+
+canvas.moving {
+	opacity: 1;
+}
+
+
+/* Boxes */
+
+.box {
+	background: #2228;
+	border-radius: 32px;
+	margin: 16px 8px;
+	border: 2px solid #333B;
+	overflow: hidden;
+	backdrop-filter: blur(12px);
+	box-shadow: 4px 4px 24px #0003;
+}
+
+.box.clickables > * {
+	border-radius: 26px;
+	padding: 16px;
+	margin: 4px;
+	cursor: pointer;
+	background: transparent;
+	border: 2px solid transparent;
+	transition: border .2s, background .2s;
+}
+
+.box.clickables > *:hover {
+	background: #8881;
+	border: 2px solid #8881;
+}
+
+section .box {
+	transition: transform .4s, backdrop-filter .4s .4s;
+}
+
+section:not(.current) .box {
+	transform: translateY(16px);
+	backdrop-filter: none;
+	transition: transform .4s .4s, backdrop-filter .4s;
+}

@@ -1,0 +1,28 @@
+/* Skills */
+
+.skills-card {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex: 1 1 0;
+}
+
+.skills-card b {
+	--color: #F68;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	min-width: 240px;
+}
+
+.skills-card i {
+	font-size: 48px;
+	margin-left: auto;
+	color: var(--color);
+	text-shadow: 0 0 64px var(--color);
+}
+
+.skills-card p {
+	font-size: 18px;
+	margin-bottom: -1px;
+}

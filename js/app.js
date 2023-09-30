@@ -2,13 +2,13 @@ import Experience from "./Experience/Experience";
 import UI from "./UI/UI";
 
 export default class App {
-    constructor() {
-        const canvas = document.getElementById("experience")
-        this.experience = new Experience(canvas)
+	constructor() {
+		const canvas = document.getElementById("experience")
+		this.experience = new Experience(canvas)
 
-        this.ui = new UI()
-        this.experience.loadingManager.addOnLoadListener(() => {
-            setTimeout(this.ui.init, 2000)
-        })
-    }
+		this.ui = new UI()
+		this.experience.loadingManager.addOnLoadListener(() => {
+			setTimeout(this.ui.init, 1000)
+		})
+	}
 }

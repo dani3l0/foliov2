@@ -12,31 +12,27 @@ export default class PageManager {
 		this.navbarManager = new NavbarManager()
 		this.locationManager = new LocationManager()
 		this.titleManager = new TitleManager()
-		this.init()
 	}
 
 	init() {
 		this.navbarManager.init((item) => {
 			this.locationManager.set(item.getAttribute("to"))
 		})
-
-		window.addEventListener("hashchange", (event) => {
+		window.addEventListener("hashchange", () => {
 			this.show(this.locationManager.get())
-		});
-
+		})
 		this.show(this.locationManager.get())
 	}
 
 	show(id) {
-		this.sectionManager.show(id)
-		this.navbarManager.select(id)
-
+		document.getElementById(id).scrollTo(0, 0)
 		let coords = document.getElementById(id).getAttribute("lookAt")
 		if (!coords) coords = "0,0,0,0"
 		coords = coords.split(",")
-		this.world.lookAt(coords)
 
-		// TODO: Pretty names
+		this.sectionManager.show(id)
+		this.navbarManager.select(id)
+		this.world.lookAt(coords)
 		this.titleManager.update(id)
 	}
 }

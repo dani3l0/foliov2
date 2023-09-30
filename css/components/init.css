@@ -1,0 +1,60 @@
+/* Init page */
+
+#init {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	visibility: visible;
+	opacity: 1;
+	transition: visibility .4s, opacity .3s;
+}
+
+#init.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.init-center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes loadingAnimation {
+	from {transform: rotateZ(0);}
+	to {transform: rotateZ(360deg);}
+}
+
+.loading-dot {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	background: #333;
+	margin: 12px auto;
+	position: relative;
+	overflow: hidden;
+	animation: loadingAnimation linear 1s infinite;
+}
+
+.loading-dot::after {
+	content: " ";
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	border-radius: 80px;
+	background: #888;
+	top: calc(50% - 4px);
+	left: calc(50% - 4px);
+	transform: translate(-50%, -50%);
+}
+
+.loading-text::after {
+	content: "Loading...";
+	font-weight: bold;
+	color: #BBB;
+}

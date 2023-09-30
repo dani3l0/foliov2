@@ -1,15 +1,15 @@
 import { Power3, gsap } from "gsap"
 import GLTF from "./Utils/GLTF"
 import Textures from "./Utils/Textures"
-import GUI from 'lil-gui'
 import Experience from "./Experience"
 
 export default class World {
 	constructor() {
-		this.camera = new Experience().camera.camera
+		this.experience = new Experience()
+		this.debug = this.experience.debug
+		this.camera = this.experience.camera.camera
 		this.textures = new Textures()
 		this.importScene()
-		this.gui = new GUI()
 	}
 
 	lookAt(coords) {
@@ -27,9 +27,6 @@ export default class World {
 		scene.position.set(2.5,-2.4,3.5)
 		let deg = -90
 		scene.rotation.y = (deg / 360) * (Math.PI * 2)
-		this.gui.add(this.scene.position, "x").min(-3).max(3).step(0.05)
-		this.gui.add(this.scene.position, "y").min(-3).max(0).step(0.05)
-		this.gui.add(this.scene.position, "z").min(-3).max(3).step(0.05)
 	}
 
 	importScene() {
@@ -50,30 +47,19 @@ export default class World {
 				else if (name == "Details") {
 					this.handleTextures(obj, detailsTexture)
 				}
-				else if (name == "Special") {
-					this.handleSpecials(obj)
-				}
-				else {
-					this.handleDefault(obj)
-				}
 			}
 			this.lookAtDefault(gltf.scene)
-		})
-	}
 
-	handleSpecials(obj) {
-		let name = obj.name
+			this.debug.add("Position", "X", this.scene.position, "x", 3)
+			this.debug.add("Position", "Y", this.scene.position, "y", 3)
+			this.debug.add("Position", "Z", this.scene.position, "z", 3)
+			this.debug.add("Rotation", "Y", this.camera.rotation, "y", 3)
+		})
 	}
 
 	handleTextures(obj, material) {
 		obj.traverse((child) => {
 			child.material = material
-		})
-	}
-
-	handleDefault(obj) {
-		obj.traverse((child) => {
-			//console.log(child)
 		})
 	}
 }

@@ -1,7 +1,5 @@
 import * as THREE from 'three'
 import Experience from "./Experience";
-import { gsap } from 'gsap';
-
 
 export default class Camera {
 	constructor() {
@@ -25,7 +23,7 @@ export default class Camera {
 		this.camera.updateProjectionMatrix();
 	}
 
-	onDocumentMouseMove(event, thi) {
+	onDocumentMouseMove(event) {
 		window.mouseX = event.clientX
 		window.mouseY = event.clientY
 	}

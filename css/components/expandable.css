@@ -1,0 +1,54 @@
+/* Expandable div */
+
+.expandable {
+	cursor: pointer;
+	overflow: hidden;
+	padding: 16px 16px 14px;
+	transition: padding .3s;
+}
+
+.expandable .overview {
+	display: flex;
+	align-items: center;
+}
+
+.expandable .overview i:first-child {
+	opacity: .5;
+	margin-right: 12px;
+}
+
+.expandable .overview i:last-child {
+	opacity: .75;
+	margin-left: auto;
+	font-size: 20px;
+	transition: transform .8s;
+}
+
+.expandable.expanded .overview i:last-child {
+	transform: rotateZ(180deg);
+}
+
+.expandable .content {
+	opacity: 0;
+	height: 0;
+	margin-top: 0;
+	transition: margin .3s, height .3s, opacity .3s;
+}
+
+.expandable.expanded .content {
+	height: auto;
+	margin-top: 8px;
+	opacity: 1;
+}
+
+.expandable b {
+	margin-bottom: -1px;
+}
+
+.expandable p {
+	opacity: .5;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 4px 0;
+	line-height: 1.2;
+}

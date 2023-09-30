@@ -5,6 +5,7 @@ import World from './World'
 import Renderer from './Renderer'
 import Controls from './Controls'
 import LoadingManager from './Utils/LoadingManager'
+import Debug from './Debug'
 
 
 export default class Experience {
@@ -14,10 +15,13 @@ export default class Experience {
 			return Experience.instance
 		}
 		Experience.instance = this
+
+		this.debug = new Debug(false)
 		this.canvas = canvas
 		this.initLoadingManager()
-		
+
 		this.scene = new THREE.Scene()
+		this.scene.add(new THREE.AmbientLight(0xffffff, 1))
 		this.loop = new Loop()
 		this.sizes = this.loop.sizes
 
@@ -48,14 +52,13 @@ export default class Experience {
 	initLoadingManager() {
 		this.loadingManager = new LoadingManager()
 
-		this.loadingManager.addOnLoadListener((() => {
+		this.loadingManager.addOnLoadListener(() => {
 			document.getElementById("init").classList.add("hidden")
-		}).bind(this))
-
-		this.loadingManager.addOnProgressListener((url, loaded, total) => {
-			let pp = Math.round(100 * loaded / total)
-			console.log(url)
 		})
+		
+		// this.loadingManager.addOnProgressListener((url, loaded, total) => {
+		// 	let pp = Math.round(100 * loaded / total)
+		// })
 
 		this.loadingManager.startListening()
 	}
