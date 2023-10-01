@@ -97,3 +97,10 @@ section:not(.current) .box {
 	backdrop-filter: none;
 	transition: transform .4s .4s, backdrop-filter .4s;
 }
+
+
+/* Buttons */
+
+i.back::after {
+	content: "arrow_back";
+}
