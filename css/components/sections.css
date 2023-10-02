@@ -22,15 +22,6 @@ section {
 	transition: opacity .3s, visibility .3s;
 }
 
-span > h1 {
-	margin: 32px 0 12px;
-}
-
-span > p {
-	margin: 0 0 24px;
-	line-height: 1.5;
-}
-
 section.current {
 	opacity: 1;
 	visibility: visible;
@@ -56,11 +47,12 @@ section header {
 
 section header h1 {
 	font-size: 36px;
-	margin: 8px 0;
+	margin: 4px 0;
 }
 
 section header p {
 	margin: 0;
+	font-size: 16px;
 	font-weight: bold;
 	opacity: .6;
 }
