@@ -1,10 +1,14 @@
 /* Fancy switching text */
 
+.switching-twoline {
+	margin: 0 auto;
+}
+
 .switching {
 	font-weight: bold;
 	font-size: 96px;
+	margin: 4px;
 	overflow: hidden;
-	margin: 4px 0;
 }
 
 .switching * {
@@ -16,6 +20,7 @@
 	line-height: 1;
 	padding: 8px 0;
 	position: absolute;
+	white-space: pre;
 }
 
 .switching b {
@@ -32,4 +37,22 @@
 .switching b.bottom {
 	opacity: 0;
 	transform: translateY(200%);
+}
+
+@media (max-width: 840px) {
+	.switching {
+		font-size: 72px;
+	}
+}
+
+@media (max-width: 540px) {
+	.switching {
+		font-size: 54px;
+	}
+}
+
+@media (max-width: 440px) {
+	.switching {
+		font-size: 48px;
+	}
 }
