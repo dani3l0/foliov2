@@ -6,14 +6,11 @@ Fuck me, so much shit left
 
 ### For now
 
-- [ ] Final Blender scene
-- [ ] Final Blender textures
-- [ ] Skills subpages
-- [ ] Projects list
-- [ ] Scrollable navbar
-- [ ] Responsive UI
+- [x] Final Blender scene
+- [x] Final Blender textures
+- [x] Responsive UI
 - [ ] Confetti and birthday banner
-- [ ] Remove unused files
+- [x] Remove unused files
 - [ ] Coverage check
 - [ ] Code optimizations
 - [ ] Ackee stats

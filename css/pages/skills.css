@@ -3,12 +3,14 @@
 .skills {
 	display: flex;
 	flex-wrap: wrap;
+	flex: 1 1 0;
 	margin-bottom: 20px;
 }
 
 .skills div {
+	flex: 1;
 	margin: 8px 12px;
-	min-width: 320px;
+	min-width: 240px;
 }
 
 .skills div b {

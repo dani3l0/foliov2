@@ -1,9 +1,15 @@
 /* About me */
 
-.id-card {
+.id-card, .id-card div {
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+}
+
+.id-card div {
+	padding: 16px 0;
+	flex-grow: 1;
+	flex-wrap: wrap;
 }
 
 .id-card img {
@@ -15,7 +21,9 @@
 }
 
 .id-card b {
+	flex-grow: 1;
 	margin: 0 auto;
+	padding: 6px 16px;
 }
 
 .id-card p {
@@ -50,4 +58,14 @@
 	margin-right: 10px;
 	text-shadow: 2px 2px 36px var(--color);
 	border-radius: 24px;
+}
+
+@media (max-width: 480px) {
+	.id-card h2 {
+		font-size: 28px;
+	}
+
+	.id-card p {
+		font-size: 12px;
+	}
 }

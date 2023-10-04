@@ -29,8 +29,7 @@ export default class Experience {
 		this.world = new World()
 
 		this.renderer = new Renderer()
-		this.controls = new Controls()
-		this.controls.enabled = false
+		this.controls = new Controls(false)
 
 		this.start()
 	}

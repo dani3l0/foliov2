@@ -30,9 +30,9 @@ export default class World {
 	}
 
 	importScene() {
-		let buildingTexture = this.textures.load("textures/building.jpg")
-		let furnitureTexture = this.textures.load("textures/furniture.jpg")
-		let detailsTexture = this.textures.load("textures/details.jpg")
+		let buildingTexture = this.textures.load("textures/building.webp")
+		let furnitureTexture = this.textures.load("textures/furniture.webp")
+		let detailsTexture = this.textures.load("textures/details.webp")
 
 		new GLTF("gltf/scene.glb", (gltf) => {
 			this.scene = gltf.scene
