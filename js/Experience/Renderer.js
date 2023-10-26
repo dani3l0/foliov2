@@ -25,7 +25,7 @@ export default class Renderer {
 
 	resize() {
 		this.renderer.setSize(this.sizes.width, this.sizes.height)
-		this.renderer.setPixelRatio(this.sizes.pixelRatio * 2) // *2 for fake anti-aliasing
+		this.renderer.setPixelRatio(this.sizes.pixelRatio) // *2 for fake anti-aliasing
 	}
 
 	update() {

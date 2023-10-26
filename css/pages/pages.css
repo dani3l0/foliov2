@@ -10,15 +10,6 @@
 	margin: 54px 24px 12px;
 }
 
-.version {
-	text-align: center;
-	display: block;
-	margin: 32px auto 0;
-	opacity: .25;
-	font-size: 12px;
-	font-weight: bold;
-}
-
 @media (max-width: 540px) {
 	#main h1 {
 		font-size: 18px;

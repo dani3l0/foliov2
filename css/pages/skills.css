@@ -32,7 +32,15 @@
 	background: var(--color);
 	top: 0;
 	height: 100%;
-	width: var(--width);
+	width: 0;
+	box-shadow: 0 0 12px var(--color);
+	transition: width calc(2s * var(--level)) .7s, box-shadow .4s 1s;
+}
+
+.current .skills div p::before {
+	width: calc(var(--level) * 100%);
+	transition: width calc(2s * var(--level)), box-shadow .4s calc(2s * var(--level) + .7s);
+	box-shadow: 0 0 0 var(--color);
 }
 
 .skills u {
