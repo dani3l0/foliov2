@@ -1,6 +1,7 @@
 import PageManager from "../PageManager/PageManager";
 import AboutMe from "../Pages/AboutMe";
 import Home from "../Pages/Home";
+import Settings from "../Pages/Settings";
 import Expandable from "./CandyBox/Expandable";
 
 export default class UI {
@@ -15,6 +16,7 @@ export default class UI {
 
 		this.pageHome = new Home("main")
 		this.pageAbout = new AboutMe("about")
+		this.pageSettings = new Settings("settings")
 
 		this.pageManager.init()
 

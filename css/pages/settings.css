@@ -34,6 +34,7 @@
     height: 28px;
     border-radius: 32px;
     background: #8886;
+    transition: background .2s;
 }
 
 .settings-card .switch.enabled {
@@ -44,18 +45,20 @@
     content: " ";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 2px;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     margin: 0 4px;
     border-radius: 32px;
     background: #888;
     z-index: 100;
+    transition: background .2s, left .3s, width .15s, height .15s;
 }
 
 .settings-card .switch.enabled::after {
-    left: unset;
-    right: 0;
+    left: calc(100% - 28px);
     background: #0F8;
+    width: 20px;
+    height: 20px;
 }
