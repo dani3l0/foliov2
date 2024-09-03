@@ -1,0 +1,61 @@
+.settings-card b {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 4px;
+    border-radius: 26px;
+    transition: all .2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.settings-card b:hover {
+    background: #8881;
+    border-color: #8881;
+}
+
+.settings-card .text {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.settings-card .name {
+    font-size: 16px;
+}
+
+.settings-card .desc {
+    font-size: 14px;
+    opacity: .6;
+}
+
+.settings-card .switch {
+    position: relative;
+    width: 48px;
+    height: 28px;
+    border-radius: 32px;
+    background: #8886;
+}
+
+.settings-card .switch.enabled {
+    background: #0F84;
+}
+
+.settings-card .switch::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    border-radius: 32px;
+    background: #888;
+    z-index: 100;
+}
+
+.settings-card .switch.enabled::after {
+    left: unset;
+    right: 0;
+    background: #0F8;
+}

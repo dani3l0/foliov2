@@ -6,8 +6,8 @@ import TitleManager from "./TitleManager";
 
 export default class PageManager {
 	constructor() {
-		this.experience = new Experience()
-		this.world = this.experience.world
+		// this.experience = new Experience()
+		// this.world = this.experience.world
 		this.sectionManager = new SectionManager()
 		this.navbarManager = new NavbarManager()
 		this.locationManager = new LocationManager()
@@ -32,7 +32,7 @@ export default class PageManager {
 
 		this.sectionManager.show(id)
 		this.navbarManager.select(id)
-		this.world.lookAt(coords)
+		// this.world.lookAt(coords)
 		this.titleManager.update(id)
 	}
 }

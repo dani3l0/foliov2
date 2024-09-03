@@ -1,6 +1,7 @@
 @import 'about.css';
 @import 'contact.css';
 @import 'skills.css';
+@import 'settings.css';
 
 #main span > * {
 	margin: 0 20px;
